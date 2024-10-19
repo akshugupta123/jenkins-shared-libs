@@ -4,6 +4,7 @@ def call() {
             # Define variables for clarity and reusability
             TOMCAT_USER=ec2-user
             TOMCAT_HOST=172.31.43.162
+            
             TOMCAT_PATH=/opt/tomcat9
             WAR_FILE=target/ai-leads.war
 
