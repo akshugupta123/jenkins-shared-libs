@@ -1,4 +1,3 @@
-def call(i,j){
-  result = a + b
-  echo "sum of $a and $b is $result"
+def call(int a, int b) {
+    echo "Sum of ${a} and ${b} is ${a + b}"
 }
