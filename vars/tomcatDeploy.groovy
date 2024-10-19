@@ -4,20 +4,12 @@ def call() {
             # Define variables for clarity and reusability
             TOMCAT_USER=ec2-user
             TOMCAT_HOST=172.31.43.162
-            
             TOMCAT_PATH=/opt/tomcat9
             WAR_FILE=target/ai-leads.war
 
             # Check if the WAR file exists before proceeding
             if [ ! -f "$WAR_FILE" ]; then
                 echo "WAR file not found: $WAR_FILE"
-                exit 1
-            fi
-
-            # Check if the EC2 instance is reachable
-            ping -c 2 $TOMCAT_HOST > /dev/null 2>&1
-            if [ $? -ne 0 ]; then
-                echo "EC2 instance $TOMCAT_HOST is not reachable"
                 exit 1
             fi
 
